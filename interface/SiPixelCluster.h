@@ -114,7 +114,9 @@ class SiPixelCluster {
 	} // Return total cluster charge.
 
 	inline int minPixelRow() const { return theMinPixelRow;} // The min x index.
-  inline int minPixelCol() const { return theMinPixelCol & 511;} // The min y index.
+  inline int minPixelCol() const { return theMinPixelCol;} // & 511;} // The min y index.
+  //Need more than 9 bits; other bits seem unused nowadays - if ever!  idr 25/3/10
+
 	
   inline int maxPixelRow() const {
 		int maxRow = 0;
